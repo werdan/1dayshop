@@ -1,0 +1,12 @@
+		<div>
+			<div class="bold">Заявка на покупку: <?php echo $this->product->name ?> - отправлена</div>
+	  		<div class="mt10 aLeft pl10">
+  				Мы свяжемся с вами, чтобы уточнить адрес доставки и удобное для вас время получения покупки. 
+  			</div>
+  			<input type="button" onclick="ContactPop.hideOverlay();" value="Закрыть"/>
+		<?php if ($this->ajaxForm == true) :?>
+	 		<script type="text/javascript">
+	 			_gaq.push(['_trackPageview','/order/success']);
+ 			</script>
+		<?php endif?>
+		</div>

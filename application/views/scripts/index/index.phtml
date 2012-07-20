@@ -1,0 +1,34 @@
+         	<div class="grid_32">
+				<div class="grid_16 alpha">
+					<?php $locale = new Zend_Locale('ru_RU');
+					$currentDate = new Zend_Date(null,null,$locale);?>
+					<div class="teaser">Только сегодня: <span class="currentDate"><?php echo $currentDate->toString('d MMMM')?></span></div>
+					<h1 class="productName"><?php echo $this->escape($this->currentProduct->name)?></h1>
+                </div>
+				<div class="prefix_1 grid_15 omega">
+					<?php echo $this->partial('index/keepintouch.phtml');?>
+	 				<?php echo $this->partial('product/quantitygauge.phtml',array('product' => $this->currentProduct));?>
+				</div>
+				<div class="clear"></div>
+			</div>					
+			<div class="grid_32">	
+                 <div class="grid_16 alpha">
+                   <div class="productImageBox mb10">
+  					<div class="top"><img class="t0" src="/images/new_top.png"/></div>
+      	            <div class="aCenter inner"><img src="<?php echo $this->currentProduct->getPathImageFile();?>"/></div>
+  					<div class="bottom"><img src="/images/new_bottom.png"/></div>
+                   </div>
+                   <div class="productDescription"><?php echo $this->currentProduct->description?></div>
+	    	       <div><?php echo $this->partial('product/quickorder.phtml',array('product' => $this->currentProduct))?></div>
+                 </div>
+                 <div class="grid_15 prefix_1 omega">
+					<?php echo $this->partial('product/order.phtml',array('product' => $this->currentProduct))?>
+					<?php echo $this->partial('index/shareus.phtml');?>
+					<div class="clear"></div>              
+                 </div>
+                 <div class="clear"></div>
+         	</div>
+         	<div class="clear"></div>
+         	
+
+

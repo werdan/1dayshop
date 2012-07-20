@@ -1,0 +1,25 @@
+<div class="orderPanel grid_15 alpha">
+<div class="prefix_1 suffix_1 grid_13 alpha">
+    <div class="grid_9 alpha">
+    	<div>Цена: <span class="price"><?php echo $this->product->price?></span> грн </div>
+        <div class="regularPrice mt10">Обычная цена: <span ><?php echo $this->product->priceOriginal?></span> грн </div>
+    </div>
+    <div class="discount grid_4 omega"><?php echo $this->product->getDiscount()?>%</div>
+    <div class="clear"></div>
+</div>
+<div class="prefix_1 suffix_1 grid_13 omega buttons">
+	<div class="grid_5 alpha">
+	   	<a href="/order/"><img src="/images/order.png"/></a>
+	</div>
+	<div class="tellFriend grid_5"><!-- <a href="#">Рассказать друзьям</a> --></div>
+	<div class="prefix_1 grid_2 omega retweet">
+				<a target="_blank"
+					href="http://twitter.com/home/?status=<?php echo urlencode('Советую обратить внимание на ' .  $this->product->name. ' со скидкой '. $this->product->getDiscount(). '% в магазине http://1dayshop.com.ua RT @1dayshop')?>"
+					title="">
+					<img src="/images/retweet01.png" />
+				</a>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>

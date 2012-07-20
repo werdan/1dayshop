@@ -1,0 +1,14 @@
+<div class="orderPanel prefix_1 suffix_1 grid_14 alpha">
+	   	<div class="grid_5 alpha">
+			<a href="/order/"><img src="/images/order.png"/></a>
+   		</div>
+    	<div class="grid_5 mt5 pb10"><span class="price"><?php echo $this->product->price?></span> грн </div>
+		<div class="prefix_1 grid_3 omega retweet pb20 mt5">
+				<a target="_blank"
+					href="http://twitter.com/home/?status=<?php echo urlencode('Советую обратить внимание на ' .  $this->product->name. ' со скидкой '. $this->product->getDiscount(). '% в магазине http://1dayshop.com.ua RT @1dayshop')?>"
+					title="">
+					<img src="/images/retweet01.png" />
+				</a>
+		</div>
+<div class="clear"></div>
+</div>

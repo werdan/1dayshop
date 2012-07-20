@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+  <product 
+    id="1" 
+    name="My First Post" 
+    dateSalesStart="2008-12-01 12:30:29" 
+    dateSalesEnd="2008-12-01 12:30:29" 
+  />
+</dataset>

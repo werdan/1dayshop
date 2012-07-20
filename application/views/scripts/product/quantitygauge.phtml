@@ -1,0 +1,25 @@
+<div class="grid_15">
+	<?php 
+      $message = "есть несколько";
+	  $ratio = (int) round(100*$this->product->leftInStock/$this->product->initialQuantity,0);
+	  if ($ratio == 0) {
+	     $fullGrid = 10;
+	  } else if ($ratio>0 && $ratio <=33) {
+	     $fullGrid = 7;
+	  } else if ($ratio>33 && $ratio<=66) {
+	     $fullGrid = 5;
+	  } else if ($ratio>66 && $ratio<=100) {
+	     $fullGrid = 2;
+	     $message = "пока достаточно";
+	  } 
+	  $emptyGrid = 14-$fullGrid;
+	?>
+	<div class="grid_1 alpha"><img class="gauge" src="/images/lamp_1.png" title="осталось в наличие"/></div>							
+	<div class="full gauge grid_<?php echo $fullGrid?>"><div class="bordered"></div>&nbsp</div>
+	<?php if ($fullGrid != 0 ):?>
+	<div class="empty gauge grid_<?php echo $emptyGrid?> omega"><div class="bordered">
+		<?php echo $message?>
+	</div></div>
+	<?php endif?>
+	<div class="clear"></div>
+</div>	

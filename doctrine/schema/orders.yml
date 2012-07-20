@@ -1,0 +1,19 @@
+---
+Order:
+    tableName: orders
+    columns:
+        id:
+            primary: true
+            autoincrement: true
+            type: integer
+        date:
+            type: int(11)
+        customer_id:
+            type: int(11)
+        product_id:
+            type: int(11)
+    relations:
+        Customer:
+            foreignType: one
+        Product:
+            foreignType: one

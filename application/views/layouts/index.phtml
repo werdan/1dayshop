@@ -1,0 +1,38 @@
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>    
+   <?php echo $this->headMeta() ?> 
+   <meta name="language" content="ru" />
+   <meta name="description" content="Каждый день мы продаем один новый товар по самой лучшей цене. У нас бывают скидки до -50%!"/> 
+   <meta name="keywords" content="продажа товара, скидка, лучшая цена, интернет-магазин, один товар"/> 
+   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+   <link rel="alternate" type="application/rss+xml" href="/rss/" /> 
+   <?php echo $this->headLink()->appendStylesheet('http://yui.yahooapis.com/combo?2.8.0r4/build/reset/reset-min.css')
+                               ->appendStylesheet('/css/960.css')
+                               ->appendStylesheet('/css/main.css')
+                               ->appendStylesheet('/css/contact-pop.css')?>
+   <?php echo $this->headScript()->appendFile('/js/jquery/jquery-1.4.2.min.js')
+                                 ->appendFile('/js/jquery/contact-pop.js')
+                                 ->appendFile('/js/jquery/jquery.resettable.js')
+                                 ->appendFile('/js/main.js')?>
+   <script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-15381014-1']);
+ 	  _gaq.push(['_trackPageview']);
+     (function() {
+   		 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    	 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    	 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  				 })();
+   </script>
+   <title><?php echo $this->escape($this->title) ?></title>
+   
+</head>
+<body> 
+<div  class="container_32">
+   <div id="hd"><?php echo $this->partial('header.phtml')?></div>
+   <div id="bd"><?php echo $this->layout()->content ?></div>
+   <div id="ft"><?php echo $this->partial('footer.phtml')?></div>
+</div>
+</body>
+</html>

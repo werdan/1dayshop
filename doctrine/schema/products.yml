@@ -1,0 +1,26 @@
+---
+Product:
+    tableName: products
+    columns:
+        id:
+            primary: true
+            autoincrement: true
+            type: integer(4)
+        name:
+            type: string(255)
+        priceOriginal:
+            type: integer
+        price:
+            type: integer
+        description:
+            type: string
+        dateSalesStart:
+            type: integer(11)
+        dateSalesEnd:
+            type: integer(11)
+        initialQuantity:
+            type: integer
+        leftInStock:
+            type: integer
+        imageFile:
+            type: string(255)

@@ -1,0 +1,10 @@
+
+RewriteEngine On
+
+RewriteRule ^index/archive/(\d+)/$ index/archive?product_id=$1
+
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]
